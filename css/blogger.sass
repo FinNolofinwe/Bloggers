@@ -1,0 +1,768 @@
+@font-face 
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 500
+  src: url('../assets/fonts/Montserrat-Medium.woff') format('woff'), url('../assets/fonts/Montserrat-Medium.ttf') format('truetype')
+
+@font-face 
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 400
+  src: url('../assets/fonts/Montserrat-Regular.woff') format('woff'), url('../assets/fonts/Montserrat-Regular.ttf') format('truetype')
+
+@font-face 
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 300
+  src: url('../assets/fonts/Montserrat-Light.woff') format('woff'), url('../assets/fonts/Montserrat-Light.ttf') format('truetype')
+
+@font-face 
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 600
+  src: url('../assets/fonts/Montserrat-SemiBold.woff') format('woff'), url('../assets/fonts/Montserrat-SemiBold.ttf') format('truetype')
+
+@font-face 
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 700
+  src: url('../assets/fonts/Montserrat-Bold.woff') format('woff'), url('../assets/fonts/Montserrat-Bold.ttf') format('truetype')
+
+@font-face 
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 800
+  src: url('../assets/fonts/Montserrat-ExtraBold.woff') format('woff'), url('../assets/fonts/Montserrat-ExtraBold.ttf') format('truetype')
+
+body
+  font-family: 'Montserrat', sans-serif 
+  font-size: 1.39vw
+  line-height: 1.67vw
+  color: #EFF3F5
+  background: #6E105E
+  cursor: url('../assets/img/cursor1.svg'), auto
+  a
+    cursor: url('../assets/img/cursor1.svg'), auto
+  
+.header
+  background: linear-gradient(0deg, rgba(110, 16, 94, 0) 3.12%, #320029 100%)
+  &__wrapper
+    padding-top: 10px
+    padding-bottom: 23px
+    margin: 0 auto
+    width: 90.56vw
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+  &__logo-img
+    width: 6.81vw
+    height: auto
+  &__nav
+    width: 35vw
+  &__list
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 0
+    width: 35vw
+  &__item
+    list-style-type: none
+    margin-right: 2.083vw
+    &-link
+      text-decoration: none
+      color: inherit
+      font-weight: 600
+  &__language
+    font-weight: 600
+  &__burger
+    display: none
+    width: 26px
+    height: 4.7vw
+    position: relative
+  &__close
+    display: none
+    position: relative
+    width: 26px
+    height: 26px
+    z-index: 101
+    &-line
+      display: block
+      position: absolute
+      width: 100%
+      height: 3px
+      background: #EFF3F5
+      top: 50%
+      &:first-child
+        transform: translateY(-50%) rotate(45deg)
+      &:last-child
+        transform: translateY(-50%) rotate(-45deg)
+
+.burger__line
+  display: block
+  width: 100%
+  height: 3px
+  background-color: #EFF3F5
+  position: absolute
+  left: 0
+  &-first
+    top: 0
+  &-second
+    top: 50%
+    transform: translateY(-50%)
+  &-third
+    bottom: 0
+
+.main
+  width: 90.56vw
+  margin: 0 auto
+  &__heading
+    margin: 0 auto
+    padding-bottom: 50px
+    text-align: center
+
+    font-weight: 800
+    font-size: 3.47vw
+    line-height: 4.24vw
+
+.path
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin-bottom: 46px
+  a
+    text-decoration: none
+    color: #EFF3F5
+    font-weight: 300
+    font-size: 0.97vw
+    line-height: 1.53vw
+  &__current
+    margin-left: 0.4vw
+    padding: 0 0.76vw
+    font-size: 0.97vw
+    line-height: 1.53vw
+
+    color: #6E105E
+
+    background: #EFF3F5
+    opacity: 0.8
+    border-radius: 1.29vw
+
+.profile
+  width: 90.14vw
+  height: 39.72vw
+  margin-left: 0.35vw
+  display: flex
+  flex-direction: row
+  background: rgba(255, 255, 255, 0.25)
+  border: 1px solid #EFF3F5
+  box-sizing: border-box
+  //backdrop-filter: blur(5px)
+  border-radius: 5px
+  &__avatar
+    width: 28.4vw
+    height: 39.58vw
+    height: auto
+    background-image: url('../assets/img/Avatar.jpg') 
+    background-repeat: no-repeat
+    border-radius: 4px 0px 0px 4px
+    background-size: cover
+  &__info
+    width: 61.74vw
+    padding: 2.08vw 2.78vw
+    box-sizing: border-box
+    &-name
+      margin: 0
+      padding-bottom: 29px
+      font-weight: 800
+      font-size: 3.47vw
+      line-height: 4.24vw
+    &-line
+      margin: 0
+      padding-bottom: 30px
+      border: none
+      border-top: 1px solid #EFF3F5
+  &__media
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+  &__subs
+    padding-bottom: 25px
+    margin-right: 3.47vw
+    display: flex
+    flex-direction: row
+    &-img
+      height: 4.44vw
+      width: 4.44vw
+      margin-right: 1.39vw
+  &__current
+    display: flex
+    flex-direction: column
+    &-number
+      font-weight: bold
+      font-size: 2.08vw
+      line-height: 2.57vw
+    &-subscribers
+      font-weight: 500
+      font-size: 1.11vw
+      line-height: 1.67vw
+      letter-spacing: 0.05em
+  &__description
+    height: 12vw
+    overflow-y: scroll
+    scrollbar-color: #EFF3F5 #969696
+    scrollbar-width: thin
+    &::-webkit-scrollbar 
+      width: 2px
+    &::-webkit-scrollbar-track 
+      background-color: #969696
+    &::-webkit-scrollbar-track-piece
+      width: 2px
+    &::-webkit-scrollbar-thumb 
+      border-radius: 4px
+      background-color: #EFF3F5
+    &-title
+      margin: 0
+      font-weight: bold
+      font-size: 2.08vw
+      line-height: 2.57vw
+      padding-bottom: 10px
+    &-text 
+      width: 54.44vw
+      font-weight: 500
+      font-size: 1.11vw
+      line-height: 1.67vw
+      letter-spacing: 0.05em
+
+.video
+  padding-top: 80px
+  &__title
+    margin: 0
+    text-align: center
+    font-weight: 800
+    font-size: 3.47vw
+    line-height: 4.24vw
+  &__pics
+    padding-top: 50px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+
+.picture
+  position: relative
+  margin-bottom: 30px
+  cursor: url('../assets/img/cursor.svg'), auto
+  &__img
+    display: block
+    width: 29.24vw
+    height: auto
+    opacity: 75%
+  &__rep
+    position: absolute
+    top: 50%
+    left: 46.7%
+    width: 3.125vw
+    height: auto
+    transform: translateY(-50%)
+
+.bloggers
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding-top: 50px
+  &__title
+    margin: 0
+    text-align: center
+    font-weight: 800
+    font-size: 3.47vw
+    line-height: 4.24vw
+  &__cards
+    overflow-x: hidden
+  &__wrapper
+    overflow-x: none
+    width: 182.5vw
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+    padding-top: 50px
+    transition: transform .2s ease
+  &__slider
+    display: flex
+    flex-direction: row
+    margin: 0 auto
+
+.slider__button
+  &-left,
+  &-right
+    display: block
+
+.slider__progress
+  position: relative
+  width: 21.6vw
+  margin: 11px 1.05vw
+  height: 2px
+  background-color: #969696
+  &-thumb
+    position: absolute
+    top: 0
+    left: 0.5
+    width: 10.8vw
+    height: 4px
+    border-radius: 4px
+    transform: translateY(-25%)
+    background-color: #EFF3F5
+    transition: all .2s ease
+
+
+.card
+  width: 21.6vw
+  height: 21.6vw
+  position: relative
+  margin-bottom: 37px
+  background: rgba(189, 28, 159, 0.5)
+  cursor: url('../assets/img/cursor.svg'), auto
+  &__img
+    width: 100%
+    height: 100%
+    opacity: 0.5
+    &:hover
+      opacity: 1
+  &__description
+    position: absolute
+    left: 0.83vw
+    top: 12.92vw
+    &-title
+      font-size: 2.08vw
+      line-height: 2.6vw
+      margin: 0
+      padding-bottom: 10px
+  &__subs
+    width: 19.92vw
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+
+    font-size: 1.39vw
+    line-height: 1.67vw
+    font-weight: 500
+    &-youtube
+      margin-right: 1.39vw
+      margin-bottom: 0.6vw
+      &::before
+        content: ""
+        display: inline-block
+        vertical-align: middle
+
+        margin-right: 0.69vw
+        height: 1.67vw
+        width: 1.67vw
+
+        background-image: url(../assets/img/youtube_ic.svg)
+        background-size: contain
+        background-repeat: no-repeat
+    &-vk
+      margin-bottom: 0.6vw
+      &::before
+        content: ""
+        display: inline-block
+        vertical-align: top
+
+        margin-right: 0.69vw
+        height: 1.67vw
+        width: 1.67vw
+
+        background-image: url(../assets/img/vk_ic.svg)
+        background-size: contain
+        background-repeat: no-repeat
+    &-inst
+      &::before
+        content: ""
+        display: inline-block
+        vertical-align: top
+
+        margin-right: 0.69vw
+        height: 1.67vw
+        width: 1.67vw
+
+        background-image: url(../assets/img/inst_ic.svg)
+        background-size: contain
+        background-repeat: no-repeat
+
+.footer
+  margin-top: 50px
+  position: relative
+  background: linear-gradient(180deg, rgba(110, 16, 94, 0) 3.12%, #320029 100%)
+  &__wrapper
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    margin: 0 auto
+    width: 90.56vw
+  &__logo-img
+    width: 13.96vw
+    height: auto
+  &__nav
+    width: 70.49vw
+    padding-bottom: 8px
+  &__list
+    display: flex
+    flex-direction: row
+    padding-left: 0
+    margin: 0
+  &__item
+    list-style-type: none
+    margin-right: 3.47vw
+    color: #EFF3F5
+    font-weight: 600
+    &:first-child
+      margin-right: 3.26vw
+    &:last-child
+      margin-right: 0
+  &__social
+    position: absolute
+    left: 50%
+    bottom: 30px
+    top: auto
+    transform: translateX(-50%)
+    img
+      width: 2.22vw
+      height: auto
+    &-vk
+      margin-right: 2.08vw
+
+@media screen and (max-width: 1024px)
+  .profile__info-name,
+  .profile__info-line,
+  .profile__subs
+    padding-bottom: 18px
+
+  .profile__description
+    height: 11vw
+
+  .footer__social
+    bottom: 15px
+
+@media screen and (max-width: 768px)  
+  .profile__info-name,
+  .profile__info-line,
+  .profile__subs
+    padding-bottom: 15px
+
+  .profile
+    &__subs
+      padding-bottom: 15px
+      margin-right: 3.47vw
+      display: flex
+      flex-direction: row
+      &:last-child
+        margin-right: 0
+      &-img
+        height: 3.125vw
+        width: 3.125vw
+        margin-right: 1.56vw
+    &__current
+      display: flex
+      flex-direction: column
+      &-number
+        font-weight: bold
+        font-size: 1.56vw
+        line-height: 1
+    &__description
+      height: auto
+      overflow-y: auto
+
+  .path
+    margin-bottom: 25px
+    font-size: 1.11vw
+    line-height: 1.67vw
+    &__current
+      padding: 0 1vw
+      line-height: 1.67vw
+      
+  .video
+    padding-top: 30px
+    &__title
+      font-size: 4.71vw
+      line-height: 1.5
+    &__pics
+      padding-top: 30px
+  .bloggers
+    padding-top: 0
+    &__wrapper
+      padding-top: 30px
+  .card
+    margin-bottom: 30px
+    &__description
+      top: 12vw
+
+@media screen and (max-width: 425px)  
+  .header
+    &__logo-img
+      width: 10vw
+    &__burger
+      display: block
+    &__close
+      display: none
+    &__nav
+      position: fixed
+      padding-top: 20px
+      padding-bottom: 50px
+      top: 18vw
+      left: 0
+      width: 100%
+      display: block
+      background: #6E105E
+      background: linear-gradient(180deg, rgba(110, 16, 94, 100) 3.12%, #320029 100%)
+      transform: translateX(100%)
+      transition: .2s all ease-out
+      z-index: 200
+      &-active
+        display: block
+        transform: translateX(0)
+    &__list
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+      margin: 0 auto
+      padding: 0
+      width: 35vw
+    &__item
+      margin-right: 0
+      margin-bottom: 15px
+      &-link
+        text-decoration: none
+        color: #EFF3F5
+        font-size: 5.64vw
+        line-height: 1.5
+        font-weight: 600
+    &__language
+      font-size: 10px
+      line-height: 1.5
+
+  .path
+    margin-bottom: 30px
+    a
+      font-size: 8px
+      line-height: 1.5
+    &__current
+      margin-left: 5px
+      padding: 0 4px
+      font-size: 8px
+      line-height: 1.5
+
+  .video__pics
+    padding-top: 20px
+  .picture
+    margin-bottom: 15px
+
+  .bloggers
+    padding-top: 5px
+    &__title
+      font-size: 4.71vw
+      line-height: 1.5
+    &__wrapper
+      width: 372.94vw
+      padding-top: 20px
+
+  .card
+    width: 43.53vw
+    height: 43.53vw
+    margin-bottom: 20px
+    &__img
+      width: 43.53vw
+      height: 43.53vw
+    &__description
+      position: absolute
+      left: 3vw
+      top: 20vw
+      &-title
+        font-size: 3.76vw
+        line-height: 1.5
+        margin: 0
+        padding-bottom: 1.5vw
+    &__subs
+      width: auto
+      flex-direction: column
+      align-items: start
+      font-size: 2.5vw
+      line-height: 1.5
+      font-weight: 600
+      &-youtube
+        margin-right: 0
+        margin-bottom: 1.5vw
+        &::before
+          margin-right: 4.71vw
+          height: 3.76vw
+          width: 3.76vw
+      &-vk
+        margin-bottom: 1.5vw
+        &::before
+          margin-right: 4.71vw
+          height: 3.76vw
+          width: 3.76vw
+      &-inst
+        &::before
+          margin-right: 4.71vw
+          height: 3.76vw
+          width: 3.76vw
+
+  .slider__progress
+    position: relative
+    width: 32vw
+    margin: 11px 1.05vw
+    height: 2px
+    background-color: #969696
+    &-thumb
+      position: absolute
+      top: 0
+      left: 0
+      width: 8vw
+      border-radius: 4px
+      transform: translateY(-25%)
+      background-color: #EFF3F5
+      transition: all .2s ease
+
+  .profile
+    width: 90.14vw
+    height: 49.65vw
+    margin-left: 0.35vw
+    &__avatar
+      width: 35.3vw
+      height: 49.19vw
+      height: auto
+    &__info
+      width: 54.35vw
+      padding: 2vw 2vw
+      &-name
+        margin: 0
+        padding-bottom: 10px
+        font-weight: 800
+        font-size: 3.47vw
+        line-height: 4.24vw
+      &-line
+        padding-bottom: 8px
+    &__media
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+    &__subs
+      padding-bottom: 8px
+      margin-right: 3.47vw
+      &:last-child
+        margin-right: 0
+      &-img
+        height: 3.125vw
+        width: 3.125vw
+        margin-right: 1.56vw
+    &__current
+      display: flex
+      flex-direction: column
+      &-number
+        font-weight: bold
+        font-size: 1.56vw
+        line-height: 1
+    &__description
+      height: auto
+      overflow-y: auto
+      &-title
+        font-size: 2.08vw
+        line-height: 1.5
+        padding-bottom: 8px
+      &-text 
+        width: 49.41vw
+        font-weight: 500
+        font-size: 6px
+        line-height: 1.5
+        letter-spacing: 0.05em
+
+  .footer
+    margin-top: 50px
+    &__logo
+      display: none
+    &__nav
+      margin: 0 auto
+      width: 90vw
+      padding-bottom: 40px
+    &__list
+      justify-content: space-between
+    &__item
+      margin-right: 0
+      color: #EFF3F5
+      font-size: 1.8vw
+      font-weight: 500
+      &:first-child
+        margin-right: 0
+    &__social
+      position: absolute
+      left: 50%
+      bottom: 10px
+      top: auto
+      transform: translateX(-50%)
+      img
+        width: 3vw
+        height: auto
+      &-vk
+        margin-right: 2.08vw
+
+@media screen and (max-width: 375px)  
+  .profile
+    width: 90.14vw
+    height: 49.65vw
+    margin-left: 0.35vw
+    &__avatar
+      width: 35.3vw
+      height: 49.19vw
+      height: auto
+    &__info
+      width: 54.35vw
+      padding: 2vw 2vw
+      &-name
+        margin: 0
+        padding-bottom: 10px
+        font-weight: 800
+        font-size: 3.47vw
+        line-height: 4.24vw
+      &-line
+        padding-bottom: 0
+        border-top: 0 solid transparent
+    &__media
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+    &__subs
+      padding-bottom: 8px
+      margin-right: 3.47vw
+      &:last-child
+        margin-right: 0
+      &-img
+        height: 9.6vw
+        width: 9.6vw
+        margin-right: 1.56vw
+    &__current
+      display: flex
+      flex-direction: column
+      &-number
+        font-weight: bold
+        font-size: 4vw
+        line-height: 5.3vw
+      &-subscribers
+        font-size: 3.2vw
+        line-height: 4.23vw
+    &__description
+      display: none
+      height: auto
+      overflow-y: auto
+      &-title
+        font-size: 2.08vw
+        line-height: 1.5
+        padding-bottom: 8px
+      &-text 
+        width: 49.41vw
+        font-weight: 500
+        font-size: 6px
+        line-height: 1.5
+        letter-spacing: 0.05em
